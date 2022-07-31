@@ -40,3 +40,4 @@ if submit:
     ws_current_row=ws.max_row+1
     ws.append(allfactor)   
     wb.save('工作簿1.xlsx')
+    wb.close()
