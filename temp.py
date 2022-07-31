@@ -36,7 +36,8 @@ allfactor=pd.DataFrame(allfactor,columns=['age','sex', 'cp','trestbps','chol','f
 submit=st.button('提交')
 if submit:
     wb = openpyxl.load_workbook('工作簿1.xlsx')
-    wb._current_row=wb.max_row
-    wb.append(allfactor)
+    ws = wb.active
+    ws_current_row=ws.max_row
+    ws.append(allfactor)
     
     wb.save('工作簿1.xlsx')
