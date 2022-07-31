@@ -10,7 +10,7 @@ import streamlit as st
 import os
 import pandas as pd
 import numpy as np
-
+import openpyxl
 
 age=st.number_input('年龄')
 se=st.selectbox('性别',options=('男','女'))
