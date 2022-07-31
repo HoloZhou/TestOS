@@ -5,13 +5,13 @@ Spyder Editor
 This is a temporary script file.
 """
 
-#%%
+
 import streamlit as st
 import os
 import pandas as pd
 import numpy as np
 
-#%%
+
 age=st.number_input('年龄')
 se=st.selectbox('性别',options=('男','女'))
 if se=='男':
@@ -33,9 +33,9 @@ allfactor=[[age,sex, cp,trestbps,chol,fbs,restecg,thalach,
        exang,oldpeak,slope,ca,thal]]
 allfactor=pd.DataFrame(allfactor,columns=['age','sex', 'cp','trestbps','chol','fbs','restecg','thalach',
        'exang','oldpeak','slope','ca','thal'])
-#%%
+
 submit=st.button('提交')
 if submit:
-    data = pd.read_excel('C:\\Myfiles\\test\\工作簿1.xlsx')
+    data = pd.read_excel('工作簿1.xlsx')
     dense_dot = pd.concat([data, allfactor], axis=0, join="inner")
-    dense_dot.to_excel('C:\\Myfiles\\test\\工作簿1.xlsx')
+    dense_dot.to_excel('工作簿1.xlsx')
