@@ -36,9 +36,10 @@ allfactor=[age,sex, cp,trestbps,chol,fbs,restecg,thalach,
 submit=st.button('提交')
 if submit:
     wb = openpyxl.load_workbook('工作簿1.xlsx')
-    ws_current_row=ws.max_row+1
+    
     for line in allfactor:
             ws = wb['Sheet1']
+            ws_current_row=ws.max_row+1
             ws.append(allfactor)      
     wb.save('工作簿1.xlsx')
     wb.close()
