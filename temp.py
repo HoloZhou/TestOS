@@ -28,10 +28,10 @@ oldpeak=st.number_input('Insert oldpeak')
 slope=st.selectbox('slope',options=(0,1,2))
 ca=st.selectbox('ca',options=(0,1))
 thal=st.selectbox('thal',options=(1,2,3))
-allfactor=[[age,sex, cp,trestbps,chol,fbs,restecg,thalach,
-       exang,oldpeak,slope,ca,thal]]
-allfactor=pd.DataFrame(allfactor,columns=['age','sex', 'cp','trestbps','chol','fbs','restecg','thalach',
-       'exang','oldpeak','slope','ca','thal'])
+allfactor=[age,sex, cp,trestbps,chol,fbs,restecg,thalach,
+       exang,oldpeak,slope,ca,thal]
+#allfactor=pd.DataFrame(allfactor,columns=['age','sex', 'cp','trestbps','chol','fbs','restecg','thalach',
+       #'exang','oldpeak','slope','ca','thal'])
 #%%
 submit=st.button('提交')
 if submit:
