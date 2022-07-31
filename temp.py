@@ -12,11 +12,11 @@ import numpy as np
 import openpyxl
 #%%
 age=str(st.number_input('年龄'))
-se=(st.selectbox('性别',options=('男','女'))
-    if se =='男':
-        sex=str(1)
-    else:
-        sex=str(0)
+se=st.selectbox('性别',options=('男','女'))
+if se=='男':
+    sex=str(1)
+else:
+    sex=str(0)
 cp=str(st.selectbox('心律',options=(0,1,2,3)))
 trestbps=str(st.number_input('血压'))
 chol=str(st.number_input('晨起血糖'))
