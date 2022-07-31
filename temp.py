@@ -38,5 +38,6 @@ submit=st.button('提交')
 if submit:
     al=",".join(allfactor)+"\n"
     f = open('新建.csv','a')
-    f.write(al)
+    f.add_rows(data=al)
+   
     f.close()
