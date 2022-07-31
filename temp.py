@@ -37,7 +37,6 @@ submit=st.button('提交')
 
 if submit:
     al=",".join(allfactor)+"\n"
-    f = open('新建.csv','a')
-    f.add_rows(data=al)
-   
+    f = open('C:\\Myfiles\\test\\TestOS\\新建.csv','a')
+    f.write(al)
     f.close()
