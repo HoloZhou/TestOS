@@ -37,7 +37,6 @@ submit=st.button('提交')
 if submit:
     wb = openpyxl.load_workbook('工作簿1.xlsx')
     ws = wb.active
-    ws_current_row=ws.max_row
-    ws.append(allfactor)
-    
-    ws.save('工作簿1.xlsx')
+    ws_current_row=ws.max_row+1
+    ws.append(allfactor)   
+    wb.save('工作簿1.xlsx')
