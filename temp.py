@@ -29,17 +29,14 @@ slope=st.selectbox('slope',options=(0,1,2))
 ca=st.selectbox('ca',options=(0,1))
 thal=st.selectbox('thal',options=(1,2,3))
 allfactor=[age,sex, cp,trestbps,chol,fbs,restecg,thalach,
-       exang,oldpeak,slope,ca,thal]
+        exang,oldpeak,slope,ca,thal]
 #allfactor=pd.DataFrame(allfactor,columns=['age','sex', 'cp','trestbps','chol','fbs','restecg','thalach',
        #'exang','oldpeak','slope','ca','thal'])
 #%%
 submit=st.button('提交')
+
 if submit:
-    wb = openpyxl.load_workbook('工作簿1.xlsx')
-    
-    for line in allfactor:
-            ws = wb['Sheet1']
-            ws_current_row=ws.max_row+1
-            ws.append(allfactor)      
-    wb.save('工作簿1.xlsx')
-    wb.close()
+    al=",".join(allfactor)+"\n"
+    f = open('C:\\Myfiles\\test\\TestOS\\新建.csv','a')
+    f.write(al)
+    f.close()
